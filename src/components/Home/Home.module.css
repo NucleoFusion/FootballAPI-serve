@@ -32,7 +32,7 @@
   opacity: 1;
 
   position: absolute;
-  bottom: -80%;
+  top: 65%;
   left: 0;
 
   z-index: 1;
@@ -71,7 +71,7 @@
   width: 80vw;
   height: 40vh;
 
-  font-size: 4vh;
+  font-size: 3.5vh;
 
   top: 70%;
   bottom: 0;
