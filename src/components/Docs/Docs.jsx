@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Docs.module.css";
 // import bgimg from "../../images/1338700 (1).png";
 import Navbar from "../Navbar/Navbar";
-import { Route } from "react-router-dom";
+import $ from "jquery";
+import Route from "../misc/Route";
 
 export default function Docs() {
+  useEffect(() => {
+    $("body").css("overflow-y", "scroll");
+  });
+
   return (
     <>
       <Navbar />
@@ -55,6 +60,10 @@ export default function Docs() {
               </div>
             </div>
           </div>
+          <Route
+            route="/club/get/all/:limit"
+            descr="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum quod asperiores quos dolorum nam obcaecati, aut nisi. Blanditiis quo ea assumenda, doloribus reprehenderit similique sunt? Nulla at dicta quia iure!"
+          />
         </div>
       </div>
     </>

@@ -7,6 +7,7 @@ import Navbar from "../Navbar/Navbar";
 
 export default function Home() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     $("body").css("overflow", "hidden");
   });
 

@@ -10,8 +10,6 @@
 
   background-color: black;
 
-  border: red solid 1px;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -114,4 +112,6 @@
   left: 10vw;
 
   z-index: 2;
+
+  color: black;
 }
