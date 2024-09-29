@@ -31,7 +31,27 @@ export default function Docs() {
                 natus rem consectetur.
               </p>
               <div className={styles.response}>
-                <p>some code</p>
+                <p className="inconsolata">
+                  {`[`}
+                  <br />
+                  &emsp;
+                  {`{`}
+                  <br />
+                  &emsp; &emsp;
+                  {`name: Lakshit,`}
+                  <br />
+                  &emsp;&emsp;
+                  {`club: Real Madrid,`}
+                  <br />
+                  &emsp;&emsp;
+                  {`rating: 99\n`}
+                  <br />
+                  &emsp;
+                  {`},...`}
+                  <br />
+                  {`]`}
+                  <br />
+                </p>
               </div>
             </div>
           </div>

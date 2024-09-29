@@ -1,5 +1,6 @@
 body {
   overflow-y: auto;
+  overflow-x: hidden !important;
   color: white;
   opacity: 1 !important;
 }
@@ -12,10 +13,8 @@ body {
 }
 .DocsDiv > div {
   margin-top: 20vh;
-  color: rgb(255, 255, 255, 1);
-  z-index: 2;
 
-  border: solid red 1px;
+  z-index: 2;
 
   height: auto;
   min-height: 100vh;
@@ -53,4 +52,24 @@ body {
 .routeDiv > h2 {
   margin-left: 3vw;
   font-size: 5vh;
+}
+
+.response {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  /* min-height: 30vh; */
+  padding: 1vh 1vw;
+  width: 30vw;
+
+  background-color: #121212;
+}
+
+.routeDiv > p {
+  margin-left: 5vw;
+  font-size: 3vh;
+}
+
+.response > p {
+  font-size: 3vh;
+  font-family: conso;
 }
