@@ -1,0 +1,56 @@
+body {
+  overflow-y: auto;
+  color: white;
+  opacity: 1 !important;
+}
+.DocsDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 100;
+}
+.DocsDiv > div {
+  margin-top: 20vh;
+  color: rgb(255, 255, 255, 1);
+  z-index: 2;
+
+  border: solid red 1px;
+
+  height: auto;
+  min-height: 100vh;
+
+  padding: 1vh 3vw;
+}
+
+.DocsDiv > div > h1 {
+  font-size: 10vh;
+  text-align: center;
+  margin-left: 3vw;
+}
+
+.aboutDiv > h2 {
+  margin-left: 3vw;
+  font-size: 7vh;
+  text-decoration: underline;
+}
+.aboutDiv > h3 {
+  margin-left: 5vw;
+  font-size: 3.5vh;
+}
+
+.aboutDiv p {
+  font-size: 3vh;
+  margin-left: 5vw;
+}
+
+.routes > h1 {
+  font-size: 7vh;
+  margin-left: 3vw;
+  text-decoration: underline;
+}
+
+.routeDiv > h2 {
+  margin-left: 3vw;
+  font-size: 5vh;
+}

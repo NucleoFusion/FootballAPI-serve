@@ -1,9 +1,15 @@
 body {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 110vh;
 
   margin-left: 0;
-  margin-top: 0;
+  margin-top: -2.5vh;
+
+  position: relative;
+
+  overflow: auto;
+
+  background-color: black;
 }
 
 #root {
@@ -22,4 +28,19 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.bgimg {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+
+  position: fixed;
+
+  opacity: 0.6;
+
+  z-index: 1;
+
+  top: 0;
+  left: 0;
 }
