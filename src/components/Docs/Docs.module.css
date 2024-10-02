@@ -41,34 +41,3 @@ body {
   font-size: 3vh;
   margin-left: 5vw;
 }
-
-.routes > h1 {
-  font-size: 7vh;
-  margin-left: 3vw;
-  text-decoration: underline;
-}
-
-.routeDiv > h2 {
-  margin-left: 3vw;
-  font-size: 5vh;
-}
-
-.response {
-  margin-left: 7vw;
-  margin-right: 7vw;
-  /* min-height: 30vh; */
-  padding: 1vh 1vw;
-  width: 30vw;
-
-  background-color: #121212;
-}
-
-.routeDiv > p {
-  margin-left: 5vw;
-  font-size: 3vh;
-}
-
-.response > p {
-  font-size: 3vh;
-  font-family: conso;
-}

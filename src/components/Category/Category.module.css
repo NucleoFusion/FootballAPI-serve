@@ -1,0 +1,63 @@
+.routes > h1 {
+  font-size: 7vh;
+  margin-left: 3vw;
+  text-decoration: underline;
+}
+
+.routeDiv > h2 {
+  margin-left: 3vw;
+  font-size: 5vh;
+}
+
+.response {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  /* min-height: 30vh; */
+  padding: 1vh 1vw;
+  width: 30vw;
+
+  background-color: #121212;
+}
+
+.routeDiv > p {
+  margin-left: 5vw;
+  font-size: 3vh;
+}
+
+.response > p {
+  font-size: 3vh;
+  font-family: conso;
+}
+
+.staticDiv {
+  z-index: 10;
+
+  height: auto;
+
+  padding: 1vh 3vw;
+}
+
+.RoutesContainer {
+  padding: 1vh 3vw;
+}
+
+.staticDiv > h1,
+.RoutesContainer > h1 {
+  font-size: 7.5vh;
+  text-decoration: underline;
+}
+
+.staticDiv > div {
+  margin-left: 3vw;
+}
+
+.categoryContainer {
+  margin-top: 20vh;
+
+  z-index: 10;
+
+  height: auto;
+  min-height: 100vh;
+
+  padding: 1vh 3vw;
+}

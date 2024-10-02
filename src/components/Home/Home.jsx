@@ -4,6 +4,7 @@ import styles from "./Home.module.css";
 import wave from "../../images/wp3469892.webp";
 import $ from "jquery";
 import Navbar from "../Navbar/Navbar";
+import BG from "../bg/BG";
 
 export default function Home() {
   useEffect(() => {
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <>
+      <BG />
       <Navbar />
       <div className={styles.heading}>
         <div>
