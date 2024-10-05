@@ -19,6 +19,11 @@ export default function Navbar() {
             <button>Docs</button>
           </Link>
         </li>
+        <li>
+          <Link to="/docs/clubs">
+            <button>Clubs</button>
+          </Link>
+        </li>
       </ul>
     </div>
   );

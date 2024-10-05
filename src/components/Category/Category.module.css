@@ -14,7 +14,7 @@
   margin-right: 7vw;
   /* min-height: 30vh; */
   padding: 1vh 1vw;
-  width: 30vw;
+  min-width: 30vw;
 
   background-color: #121212;
 }
@@ -60,4 +60,11 @@
   min-height: 100vh;
 
   padding: 1vh 3vw;
+}
+
+.RespFormat > h1 {
+  margin-left: 3vw;
+
+  font-size: 7.5vh;
+  text-decoration: underline;
 }

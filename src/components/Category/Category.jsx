@@ -4,8 +4,9 @@ import Navbar from "../Navbar/Navbar";
 import styles from "./Category.module.css";
 import BG from "../bg/BG";
 import APIRoute from "../misc/APIRoute";
-import $ from "jquery";
+import * as $ from "jquery";
 import Statics from "../misc/Statics";
+import RespBuffer from "../misc/RespBuffer";
 
 export default function Category() {
   const { category } = useParams();
@@ -29,31 +30,49 @@ export default function Category() {
       <BG />
       <div className={styles.categoryContainer}>
         <Statics name={category} />
+        <div className={styles.RespFormat}>
+          <h1 className="bebas-neue-regular">Response Format</h1>
+          <div className={styles.response}>
+            <RespBuffer name={`${category}`} />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            iure nemo consequatur recusandae, delectus optio alias a velit?
+            Fugit suscipit rem, dolores pariatur delectus similique incidunt
+            asperiores quo ipsum placeat.
+          </p>
+        </div>
         <div className={styles.RoutesContainer}>
           <h1 className="bebas-neue-regular">
             Routes {category ? `- ${category}` : ""}
           </h1>
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/all`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/all/:limit`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/query`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/query/:limit`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/sortBy/:sortVal`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
           <APIRoute
+            name={`${category}`}
             route={`/${category}/get/sortBy/:sortVal/:limit`}
             descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
           />
