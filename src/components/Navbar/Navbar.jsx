@@ -24,6 +24,11 @@ export default function Navbar() {
             <button>Clubs</button>
           </Link>
         </li>
+        <li>
+          <Link to="/statics">
+            <button>Statics</button>
+          </Link>
+        </li>
       </ul>
     </div>
   );

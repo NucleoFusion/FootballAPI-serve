@@ -12,6 +12,7 @@ export default function Category() {
   const { category } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
+    $("body").css("overflow-y", "scroll");
     $(".bgimg").css("z-index", -1);
     if (
       category !== "clubs" &&
