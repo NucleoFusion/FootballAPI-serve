@@ -20,8 +20,8 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/docs/clubs">
-            <button>Clubs</button>
+          <Link to="/" aria-disabled>
+            <button>Query Builder</button>
           </Link>
         </li>
         <li>

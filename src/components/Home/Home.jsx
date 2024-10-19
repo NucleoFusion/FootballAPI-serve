@@ -26,7 +26,7 @@ export default function Home() {
       </div>
       <div className={styles.HomeDiv}>
         {/* <img src={bgimg} /> */}
-        <img src={wave} className={styles.wave} />
+        <img src={wave} className={styles.wave} alt="background" />
         <div className={styles.navbar}>
           <ul>
             <li></li>

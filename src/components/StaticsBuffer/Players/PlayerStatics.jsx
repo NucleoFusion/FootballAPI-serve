@@ -1,23 +1,23 @@
 import React from "react";
+import BG from "../../bg/BG";
 import styles from "../Statics.module.css";
 import Navbar from "../../Navbar/Navbar";
-import BG from "../../bg/BG";
 
-import clubs from "./Clubs.json";
-import tournaments from "./Tournaments.json";
-import sortVal from "./Sort.json";
+import squads from "./Squad.json";
+import nations from "./Nation.json";
+import leagues from "./League.json";
 
-export default function ClubStatics() {
+export default function PlayerStatics() {
   return (
     <>
       <BG />
       <Navbar />
       <div className={styles.container}>
-        <h1 className="bebas-neue-regular">Clubs</h1>
+        <h1 className="bebas-neue-regular">Players</h1>
         <div>
-          <h1 className="bebas-neue-regular">Club Names</h1>
+          <h1 className="bebas-neue-regular">Squads</h1>
           <div className={styles.jsonMap}>
-            {Object.entries(clubs).map(([key, val]) => {
+            {Object.entries(squads).map(([key, val]) => {
               return (
                 <div
                   className={`${styles.keyVal} oswald`}
@@ -28,9 +28,9 @@ export default function ClubStatics() {
         </div>
 
         <div>
-          <h1 className="bebas-neue-regular">Tournaments</h1>
+          <h1 className="bebas-neue-regular">Nations</h1>
           <div className={styles.jsonMap}>
-            {Object.entries(tournaments).map(([key, val]) => {
+            {Object.entries(nations).map(([key, val]) => {
               return (
                 <div
                   className={`${styles.keyVal} oswald`}
@@ -41,9 +41,9 @@ export default function ClubStatics() {
         </div>
 
         <div>
-          <h1 className="bebas-neue-regular">Sort Values</h1>
+          <h1 className="bebas-neue-regular">Leagues</h1>
           <div className={styles.jsonMap}>
-            {Object.entries(sortVal).map(([key, val]) => {
+            {Object.entries(leagues).map(([key, val]) => {
               return (
                 <div
                   className={`${styles.keyVal} oswald`}

@@ -33,7 +33,7 @@ export default function StaticsPage() {
           <Link to="/statics/stads">
             <button className="oswald">Stadiums</button>
           </Link>
-          <Link to="/stadiums/players">
+          <Link to="/statics/players">
             <button className="oswald">Players</button>
           </Link>
         </div>

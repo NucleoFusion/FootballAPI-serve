@@ -1,0 +1,45 @@
+.container {
+  position: absolute;
+
+  top: 20vh;
+  left: 2.5vw;
+
+  width: 88.5vw;
+  min-height: 80vh;
+
+  z-index: 10;
+
+  padding: 2vh 3vw;
+}
+
+.container > h1 {
+  text-align: center;
+  font-size: 10vh;
+  text-decoration: underline;
+}
+
+.container > div > h1 {
+  font-size: 7vh;
+  text-decoration: underline;
+}
+
+.container > div > div {
+  margin-left: 5vw;
+}
+
+.jsonMap {
+  max-height: 50vh;
+  overflow-y: scroll;
+
+  border: solid white 1px;
+
+  width: 75vw;
+
+  border-radius: 10px;
+
+  padding: 2vh 2vw;
+}
+
+.keyVal {
+  font-size: 2.5vh;
+}
