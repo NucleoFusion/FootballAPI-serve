@@ -15,7 +15,7 @@ export default function StaticsBuffer() {
 
   if (category === "clubs") {
     return <ClubStatics />;
-  } else if (category === "stads") {
+  } else if (category === "stadiums") {
     return <Stadiums />;
   } else if (category === "players") {
     return <PlayerStatics />;

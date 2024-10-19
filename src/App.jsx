@@ -6,6 +6,7 @@ import Category from "./components/Category/Category";
 // import Statics from "./components/misc/Statics";
 import StaticsBuffer from "./components/StaticsBuffer/StaticsBuffer";
 import StaticsPage from "./components/StaticsPage/StaticsPage";
+import ComingSoon from "./components/ComingSoon/ComingSoon";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/docs/:category" element={<Category />} />
         <Route path="/statics" element={<StaticsPage />} />
         <Route path="/statics/:category" element={<StaticsBuffer />} />
+        <Route path="/comingsoon" element={<ComingSoon />} />
       </Routes>
     </Router>
   );

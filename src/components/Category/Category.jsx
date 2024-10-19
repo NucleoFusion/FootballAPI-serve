@@ -36,12 +36,6 @@ export default function Category() {
           <div className={styles.response}>
             <RespBuffer name={`${category}`} />
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            iure nemo consequatur recusandae, delectus optio alias a velit?
-            Fugit suscipit rem, dolores pariatur delectus similique incidunt
-            asperiores quo ipsum placeat.
-          </p>
         </div>
         <div className={styles.RoutesContainer}>
           <h1 className="bebas-neue-regular">

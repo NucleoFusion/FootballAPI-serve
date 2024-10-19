@@ -20,7 +20,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/" aria-disabled>
+          <Link to="/comingsoon" aria-disabled>
             <button>Query Builder</button>
           </Link>
         </li>

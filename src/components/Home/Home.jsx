@@ -33,7 +33,7 @@ export default function Home() {
           </ul>
         </div>
         <div>
-          <p>
+          <p className="oswald">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             sint aspernatur temporibus, odio minima impedit veniam
             exercitationem quidem, laborum, ab id ullam? Provident vero enim qui

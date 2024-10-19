@@ -42,3 +42,43 @@ body {
   font-size: 3vh;
   margin-left: 5vw;
 }
+
+.DocsDiv p {
+  font-weight: 300;
+}
+
+.buttonDiv {
+  min-height: 20vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.buttonDiv button {
+  width: 15vw;
+  min-height: 6vh;
+
+  margin-left: 15%;
+
+  font-size: 2.5vh;
+  font-weight: 350;
+
+  border: solid white 1px;
+  background-color: transparent;
+  border-radius: 10px;
+
+  color: white;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonDiv button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}

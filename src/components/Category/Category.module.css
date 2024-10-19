@@ -68,3 +68,42 @@
   font-size: 7.5vh;
   text-decoration: underline;
 }
+
+.buttonDiv {
+  min-height: 15vh;
+
+  display: grid;
+
+  /* sstify-content: center; */
+  align-items: center;
+  /* text-align: center; */
+
+  padding: 0;
+}
+
+.buttonDiv button {
+  width: 15vw;
+  min-height: 6vh;
+
+  font-size: 2.5vh;
+  font-weight: 350;
+
+  border: solid white 1px;
+  background-color: transparent;
+  border-radius: 10px;
+
+  color: white;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.buttonDiv button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+
+.staticDiv p {
+  font-size: 3vh;
+  font-weight: 300;
+}

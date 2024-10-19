@@ -4,6 +4,7 @@ import styles from "./Docs.module.css";
 import Navbar from "../Navbar/Navbar";
 import $ from "jquery";
 import BG from "../bg/BG";
+import { Link } from "react-router-dom";
 
 export default function Docs() {
   useEffect(() => {
@@ -28,12 +29,26 @@ export default function Docs() {
           </div>
           <div className={styles.aboutDiv}>
             <h2 className="bebas-neue-regular">Authentication</h2>
-            <p>
+            <p className="oswald">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
               minus doloribus autem aspernatur ratione! Non quidem porro animi
               amet tempore nam eos quaerat sequi cupiditate quod. Perspiciatis
               ut molestias corporis.
             </p>
+          </div>
+          <div className={styles.aboutDiv}>
+            <h2 className="bebas-neue-regular">Documentation</h2>
+            <div className={styles.buttonDiv}>
+              <Link to="/docs/clubs">
+                <button>Clubs</button>
+              </Link>
+              <Link to="/docs/stadiums">
+                <button>Stadiums</button>
+              </Link>
+              <Link to="/docs/players">
+                <button>Players</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
