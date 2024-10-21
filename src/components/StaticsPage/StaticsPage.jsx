@@ -17,14 +17,17 @@ export default function StaticsPage() {
       <div className={styles.StaticsDiv}>
         <h1 className="bebas-neue-regular">Statics Page</h1>
         <div className="oswald">
-          Velit est amet ad deserunt exercitation exercitation adipisicing
-          exercitation. Eiusmod laboris qui consectetur nostrud reprehenderit
-          minim cillum. Fugiat fugiat proident occaecat ut aliqua. Et aute ut
-          cillum nulla occaecat. Lorem duis est aliquip est deserunt laboris in
-          dolor do laboris ex. Nostrud elit labore enim consequat quis nisi
-          officia enim sint non irure elit consectetur. Laboris sint voluptate
-          excepteur fugiat ullamco nostrud quis excepteur aute ex irure qui elit
-          laboris.
+          To provide an easier to understand interaction with our API, instead
+          of having the user to enter complicated phrases and names (which makes
+          it easier for errors to occur). We use a Mapping System to counter
+          this.
+          <br />
+          For Example:- <br />
+          &ensp; The Query -
+          /get/clubs/query/20?key=testkey&Team=Hoffenheim?Tournament=Bundesliga
+          <br />
+          &ensp; Turns into -
+          /get/clubs/query/20?key=testkey&Team=HOF?Tournament=BUND
         </div>
         <div>
           <Link to="/statics/clubs">
