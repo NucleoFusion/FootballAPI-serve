@@ -14,7 +14,20 @@ export default function Stadiums() {
       <div className={styles.container}>
         <h1 className="bebas-neue-regular">Stadiums</h1>
         <div>
-          <h1 className="bebas-neue-regular">Countries</h1>
+          <h1 className="bebas-neue-regular">Country</h1>
+          <div className={styles.jsonMap}>
+            {Object.entries(country).map(([key, val]) => {
+              return (
+                <div
+                  className={`${styles.keyVal} oswald`}
+                >{`${key} : ${val}`}</div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div>
+          <h1 className="bebas-neue-regular">IOC</h1>
           <div className={styles.jsonMap}>
             {Object.entries(country).map(([key, val]) => {
               return (

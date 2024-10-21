@@ -10,10 +10,17 @@ export default function Statics(props) {
       </h1>
       <div>
         <p className="oswald">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi
-          perferendis at quod fuga dolorem provident consectetur placeat omnis
-          officia voluptate corporis dolore libero in quas labore, maxime nobis
-          soluta suscipit?
+          To provide an easier to understand interaction with our API, instead
+          of having the user to enter complicated phrases and names (which makes
+          it easier for errors to occur). We use a Mapping System to counter
+          this.
+          <br />
+          For Example:- <br />
+          &ensp; The Query -
+          /get/clubs/query/20?key=testkey&Team=Hoffenheim?Tournament=Bundesliga
+          <br />
+          &ensp; Turns into -
+          /get/clubs/query/20?key=testkey&Team=HOF?Tournament=BUND
         </p>
         <div className={styles.buttonDiv}>
           <Link to={`/statics/${props.name}`}>

@@ -8,6 +8,8 @@ import * as $ from "jquery";
 import Statics from "../misc/Statics";
 import RespBuffer from "../misc/RespBuffer";
 
+import getQuery from "./queryRouteParams.json";
+
 export default function Category() {
   const { category } = useParams();
   const navigate = useNavigate();
@@ -22,8 +24,6 @@ export default function Category() {
       navigate("/docs");
     }
   });
-
-  console.log(category);
 
   return (
     <>
@@ -44,32 +44,47 @@ export default function Category() {
           <APIRoute
             name={`${category}`}
             route={`/${category}/get/all`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            descr={`- Returns an array of objects containing all the ${category} data.`}
           />
           <APIRoute
             name={`${category}`}
-            route={`/${category}/get/all/:limit`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            route={`/${category}/get/all/{limit}`}
+            descr={`- Returns an array of objects with the given length containing the ${category} data.`}
+            path={[
+              "limit - an integer defining the length of the response, ie, the number of documents you want. (REQUIRED)",
+            ]}
           />
           <APIRoute
             name={`${category}`}
             route={`/${category}/get/query`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            query={getQuery[category]}
+            descr={`- Returns an array of objects containing the data after querying all the ${category} data.`}
           />
           <APIRoute
             name={`${category}`}
-            route={`/${category}/get/query/:limit`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            route={`/${category}/get/query/{limit}`}
+            query={getQuery[category]}
+            path={[
+              "limit - an integer defining the length of the response, ie, the number of documents you want. (REQUIRED)",
+            ]}
+            descr={`- Returns an array of objects with user defined length containing the data after querying all the ${category} data.`}
           />
           <APIRoute
             name={`${category}`}
-            route={`/${category}/get/sortBy/:sortVal`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            route={`/${category}/get/sortBy/{sortVal}`}
+            path={[
+              "sortVal - the value you want to sort the documents by (for the value, please refer to statics for clubs). (REQUIRED)",
+            ]}
+            descr={`- Returns an array of objects after sorting by the respective field.`}
           />
           <APIRoute
             name={`${category}`}
-            route={`/${category}/get/sortBy/:sortVal/:limit`}
-            descr="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate assumenda, expedita minima dolore quam maxime totam omnis praesentium, consequatur laborum illum consectetur iste esse quis sapiente impedit sed laboriosam veniam."
+            route={`/${category}/get/sortBy/{sortVal}/{limit}`}
+            path={[
+              "limit - an integer defining the length of the response, ie, the number of documents you want. (REQUIRED)",
+              "sortVal - the value you want to sort the documents by(for the value, please refer to statics for clubs). (REQUIRED)",
+            ]}
+            descr={`- Returns an array of objects, with given length, after sorting by the respective field.`}
           />
         </div>
       </div>

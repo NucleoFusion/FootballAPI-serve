@@ -1,0 +1,15 @@
+{
+  "clubs": [
+    "Team - defines the team that you want the data for (for the value, please refer to statics for clubs).",
+    "Tournament - defines the Tournament the team plays in (for the value, please refer to statics for clubs)."
+  ],
+  "stadiums": [
+    "Country - defines the country the stadium is based in (for the value, please refer to statics for clubs).",
+    "IOC - the confederation the stadium should belong to (for the value, please refer to statics for clubs)."
+  ],
+  "players": [
+    "Nation - The nation the player belongs to (for the value, please refer to statics for clubs).",
+    "Comp - The Competition the player plays in (for the value, please refer to statics for clubs).",
+    "Squad - The squad the player plays for (for the value, please refer to statics for clubs)."
+  ]
+}

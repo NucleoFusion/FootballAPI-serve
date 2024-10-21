@@ -15,7 +15,7 @@ export default function PlayerStatics() {
       <div className={styles.container}>
         <h1 className="bebas-neue-regular">Players</h1>
         <div>
-          <h1 className="bebas-neue-regular">Squads</h1>
+          <h1 className="bebas-neue-regular">Squad</h1>
           <div className={styles.jsonMap}>
             {Object.entries(squads).map(([key, val]) => {
               return (
@@ -28,7 +28,7 @@ export default function PlayerStatics() {
         </div>
 
         <div>
-          <h1 className="bebas-neue-regular">Nations</h1>
+          <h1 className="bebas-neue-regular">Nation</h1>
           <div className={styles.jsonMap}>
             {Object.entries(nations).map(([key, val]) => {
               return (
@@ -41,7 +41,7 @@ export default function PlayerStatics() {
         </div>
 
         <div>
-          <h1 className="bebas-neue-regular">Leagues</h1>
+          <h1 className="bebas-neue-regular">Comp</h1>
           <div className={styles.jsonMap}>
             {Object.entries(leagues).map(([key, val]) => {
               return (

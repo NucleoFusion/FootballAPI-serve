@@ -15,13 +15,13 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/docs">
-            <button>Docs</button>
+          <Link to="/comingsoon">
+            <button>Query Builder</button>
           </Link>
         </li>
         <li>
-          <Link to="/comingsoon" aria-disabled>
-            <button>Query Builder</button>
+          <Link to="/docs">
+            <button>Docs</button>
           </Link>
         </li>
         <li>

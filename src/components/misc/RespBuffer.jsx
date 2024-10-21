@@ -8,7 +8,7 @@ export default function RespBuffer(props) {
     return <ClubsResp />;
   } else if (props.name === "players") {
     return <PlayerResp />;
-  } else if (props.name === "stad") {
+  } else if (props.name === "stadiums") {
     return <StadResp />;
   }
 }

@@ -13,7 +13,7 @@ export default function ClubStatics() {
       <BG />
       <Navbar />
       <div className={styles.container}>
-        <h1 className="bebas-neue-regular">Clubs</h1>
+        <h1 className="bebas-neue-regular">Team</h1>
         <div>
           <h1 className="bebas-neue-regular">Club Names</h1>
           <div className={styles.jsonMap}>
@@ -28,7 +28,7 @@ export default function ClubStatics() {
         </div>
 
         <div>
-          <h1 className="bebas-neue-regular">Tournaments</h1>
+          <h1 className="bebas-neue-regular">Tournament</h1>
           <div className={styles.jsonMap}>
             {Object.entries(tournaments).map(([key, val]) => {
               return (

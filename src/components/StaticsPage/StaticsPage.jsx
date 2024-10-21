@@ -30,7 +30,7 @@ export default function StaticsPage() {
           <Link to="/statics/clubs">
             <button className="oswald">Clubs</button>
           </Link>
-          <Link to="/statics/stads">
+          <Link to="/statics/stadiums">
             <button className="oswald">Stadiums</button>
           </Link>
           <Link to="/statics/players">

@@ -21,19 +21,22 @@ export default function Docs() {
             <h2 className="bebas-neue-regular">About Us</h2>
             <h3 className="oswald">BASE URL: something.com/</h3>
             <p className="oswald">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut
-              pariatur perferendis vitae quis, iure minima recusandae porro
-              veritatis expedita vel alias corporis nulla, doloribus tenetur,
-              itaque sequi quidem ducimus ea.
+              FootballAPI - By LAPIS,
+              <br /> is a REST API written purely in Golang to provide users
+              with a large and relevant Football Data for free. To check out the
+              API and its Responses refer to the Document Section below.
             </p>
           </div>
           <div className={styles.aboutDiv}>
             <h2 className="bebas-neue-regular">Authentication</h2>
             <p className="oswald">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-              minus doloribus autem aspernatur ratione! Non quidem porro animi
-              amet tempore nam eos quaerat sequi cupiditate quod. Perspiciatis
-              ut molestias corporis.
+              The API uses API KEY Authentication which is to be added as a
+              query parameter in the HTTP Request.
+              <br />
+              Example: {`www.ourbaseurl.com/{endpoint}`}?key=testkey
+              <br />
+              To get a sample of the API, the above key, ie, "testkey" also
+              serves as a valid API Key.
             </p>
           </div>
           <div className={styles.aboutDiv}>
