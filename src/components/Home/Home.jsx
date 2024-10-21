@@ -34,10 +34,11 @@ export default function Home() {
         </div>
         <div>
           <p className="oswald">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            sint aspernatur temporibus, odio minima impedit veniam
-            exercitationem quidem, laborum, ab id ullam? Provident vero enim qui
-            asperiores perspiciatis vitae libero!
+            Football API by LAPIS is a RESTful API Designed entirely in Golang
+            to conquer high requests per second and also have blazing fast
+            responses due to golangs unique concurrency model. <br />
+            It aims to provide users with a seamless interaction with the
+            relevant and also provides various methods to filter the data.
           </p>
         </div>
       </div>
