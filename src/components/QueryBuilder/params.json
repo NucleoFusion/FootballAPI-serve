@@ -1,0 +1,123 @@
+{
+  "params": [
+    {
+      "key": "/get/all",
+      "values": {
+        "query": {},
+        "path": []
+      }
+    },
+    {
+      "key": "/get/all/:limit",
+      "values": {
+        "query": {},
+        "path": [{ "key": "limit", "value": "Limit" }]
+      }
+    },
+    {
+      "key": "/get/query",
+      "values": {
+        "query": {
+          "clubs": [
+            {
+              "key": "Team",
+              "value": "Team"
+            },
+            {
+              "key": "Tournament",
+              "value": "Tournament"
+            }
+          ],
+          "stadiums": [
+            {
+              "key": "Country",
+              "value": "Country"
+            }
+          ],
+          "players": [
+            {
+              "key": "Nation",
+              "value": "Nation"
+            },
+            {
+              "key": "Comp",
+              "value": "Competition"
+            },
+            {
+              "key": "Squad",
+              "value": "Squad"
+            }
+          ]
+        },
+        "path": []
+      }
+    },
+    {
+      "key": "/get/query/:limit",
+      "values": {
+        "query": {},
+        "path": [{ "key": "limit", "value": "Limit" }]
+      }
+    },
+    {
+      "key": "/sortBy/:sortVal",
+      "values": {
+        "query": {},
+        "path": [{ "key": "sortVal", "value": "Sort By Value" }]
+      }
+    },
+    {
+      "key": "/sortBy/:sortVal/:limit",
+      "values": {
+        "query": {},
+        "path": [
+          { "key": "limit", "value": "Limit" },
+          {
+            "key": "sortVal",
+            "value": "Sort By Value",
+            "values": {
+              "clubs": [
+                {
+                  "key": "Gls",
+                  "value": "Goals"
+                },
+                {
+                  "key": "Possn",
+                  "value": "Possession"
+                },
+                {
+                  "key": "Pass",
+                  "value": "Pass"
+                },
+                {
+                  "key": "Rat",
+                  "value": "Rating"
+                }
+              ],
+              "stadiums": [
+                {
+                  "key": "Cap",
+                  "value": "Capacity"
+                },
+                {
+                  "key": "Pop",
+                  "value": "Population"
+                }
+              ],
+              "players": [
+                {
+                  "key": "Cap",
+                  "value": "Capacity"
+                },
+                {
+                  "key": "Pop",
+                  "value": "Population"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

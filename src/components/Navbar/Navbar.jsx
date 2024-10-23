@@ -15,7 +15,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/comingsoon">
+          <Link to="/querybuilder">
             <button>Query Builder</button>
           </Link>
         </li>

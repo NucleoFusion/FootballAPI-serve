@@ -7,6 +7,7 @@ import Category from "./components/Category/Category";
 import StaticsBuffer from "./components/StaticsBuffer/StaticsBuffer";
 import StaticsPage from "./components/StaticsPage/StaticsPage";
 import ComingSoon from "./components/ComingSoon/ComingSoon";
+import QueryBuilder from "./components/QueryBuilder/QueryBuilder";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/statics" element={<StaticsPage />} />
         <Route path="/statics/:category" element={<StaticsBuffer />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
+        <Route path="/querybuilder" element={<QueryBuilder />} />
       </Routes>
     </Router>
   );
