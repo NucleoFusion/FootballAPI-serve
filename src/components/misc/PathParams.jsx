@@ -1,12 +1,16 @@
 import React from "react";
 import ParamsDropdown from "./ParamsDropdown/ParamsDropdown";
 import styles from "../QueryBuilder/QueryBuilder.module.css";
+import $ from "jquery";
 
 import sortVals from "./sortVal.json";
 
 export default function PathParams(props) {
-  function handleChange(val) {
-    console.log(val);
+  function handleChange() {
+    props.func({
+      limit: $(`input[name='limit']`).val(),
+      sortVal: $(`select[name='SortVal']`).val(),
+    });
   }
 
   if (props.show === "limit") {

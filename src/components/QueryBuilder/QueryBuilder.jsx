@@ -4,6 +4,7 @@ import BG from "../bg/BG";
 import Navbar from "../Navbar/Navbar";
 import Dropdown from "../misc/Dropdown";
 import ParamsDropdownBuffer from "../misc/ParamsDropdown/ParamsDropdownBuffer";
+import $ from "jquery";
 
 import paramObj from "./params.json";
 import PathParams from "../misc/PathParams";
@@ -18,6 +19,26 @@ export default function QueryBuilder() {
     path: [],
     query: false,
   });
+
+  const [path, setPath] = useState({
+    limit: "",
+    sortVal: "",
+  });
+
+  function generateRequest() {
+    let modifiedEndpoint = data.endpoint;
+    let finalEndpoint = modifiedEndpoint.split("/");
+    finalEndpoint.map((str, idx, arr) => {
+      if (str.slice(1) === "limit" && path.limit) {
+        arr[idx] = path.limit;
+      } else if (str.slice(1) === "sortVal" && path.sortVal) {
+        arr[idx] = path.sortVal;
+      }
+    });
+    // console.log(finalEndpoint);
+
+    console.log(`url.com/${data.dataset}${finalEndpoint.join("/")}?`);
+  }
 
   function handleDataset(val) {
     setData({
@@ -34,7 +55,7 @@ export default function QueryBuilder() {
   }
 
   function handleParamChange(val) {
-    console.log(val);
+    setPath(val);
   }
 
   useEffect(() => {
@@ -58,9 +79,6 @@ export default function QueryBuilder() {
     handleParams();
   }, [data]);
 
-  // console.log(data);
-  // console.log("params", params);
-  console.log(params.query);
   return (
     <>
       <BG />
@@ -111,18 +129,24 @@ export default function QueryBuilder() {
                   {!params.path || !params.path[0] ? (
                     <h2>No Path Parameters Required</h2>
                   ) : params.path.length === 2 ? (
-                    <PathParams query={params.path} name={data.dataset} />
+                    <PathParams
+                      query={params.path}
+                      name={data.dataset}
+                      func={handleParamChange}
+                    />
                   ) : params.path[0].key === "limit" ? (
                     <PathParams
                       query={params.path}
                       name={data.dataset}
                       show="limit"
+                      func={handleParamChange}
                     />
                   ) : (
                     <PathParams
                       query={params.path}
                       name={data.dataset}
                       show="sortVal"
+                      func={handleParamChange}
                     />
                   )}
                 </div>
@@ -143,7 +167,7 @@ export default function QueryBuilder() {
             )}
           </div>
           <div className={styles.generateCont}>
-            <button>Generate</button>
+            <button onClick={generateRequest}>Generate</button>
           </div>
         </div>
       </div>
