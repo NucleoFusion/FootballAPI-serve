@@ -1,0 +1,13 @@
+{
+  "stadiums": {
+    "Cap": "Capacity",
+    "Pop": "Population"
+  },
+  "clubs": {
+    "Gls": "Goals",
+    "Possn": "Possession",
+    "Pass": "Pass",
+    "Rat": "Rating"
+  },
+  "players": {}
+}

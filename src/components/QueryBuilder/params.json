@@ -3,73 +3,42 @@
     {
       "key": "/get/all",
       "values": {
-        "query": {},
+        "query": false,
         "path": []
       }
     },
     {
       "key": "/get/all/:limit",
       "values": {
-        "query": {},
+        "query": false,
         "path": [{ "key": "limit", "value": "Limit" }]
       }
     },
     {
       "key": "/get/query",
       "values": {
-        "query": {
-          "clubs": [
-            {
-              "key": "Team",
-              "value": "Team"
-            },
-            {
-              "key": "Tournament",
-              "value": "Tournament"
-            }
-          ],
-          "stadiums": [
-            {
-              "key": "Country",
-              "value": "Country"
-            }
-          ],
-          "players": [
-            {
-              "key": "Nation",
-              "value": "Nation"
-            },
-            {
-              "key": "Comp",
-              "value": "Competition"
-            },
-            {
-              "key": "Squad",
-              "value": "Squad"
-            }
-          ]
-        },
+        "query": true,
         "path": []
       }
     },
     {
       "key": "/get/query/:limit",
       "values": {
-        "query": {},
+        "query": true,
         "path": [{ "key": "limit", "value": "Limit" }]
       }
     },
     {
       "key": "/sortBy/:sortVal",
       "values": {
-        "query": {},
+        "query": false,
         "path": [{ "key": "sortVal", "value": "Sort By Value" }]
       }
     },
     {
       "key": "/sortBy/:sortVal/:limit",
       "values": {
-        "query": {},
+        "query": false,
         "path": [
           { "key": "limit", "value": "Limit" },
           {

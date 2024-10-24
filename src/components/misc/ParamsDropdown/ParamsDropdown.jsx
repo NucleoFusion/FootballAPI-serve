@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../QueryBuilder/QueryBuilder.module.css";
 import $ from "jquery";
+import styles from "../../QueryBuilder/QueryBuilder.module.css";
 
-export default function Dropdown(props) {
+export default function ParamsDropdown(props) {
   function bufferFunc() {
     props.func($(`select[name="${props.id}"]`).find(":selected").val());
   }
@@ -13,11 +13,12 @@ export default function Dropdown(props) {
         {props.name}
       </label>
       <select className={styles.dropdown} name={props.id} onChange={bufferFunc}>
+        <option value="NA">None</option>
         {!props.values ? (
           <option>No Values Found</option>
         ) : (
-          props.values.map((obj) => {
-            return <option value={obj.key}>{obj.value}</option>;
+          Object.entries(props.values).map(([key, val]) => {
+            return <option value={key}>{val}</option>;
           })
         )}
       </select>
