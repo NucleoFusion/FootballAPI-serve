@@ -4,7 +4,10 @@ import styles from "../../QueryBuilder/QueryBuilder.module.css";
 
 export default function ParamsDropdown(props) {
   function bufferFunc() {
-    props.func($(`select[name="${props.id}"]`).find(":selected").val());
+    props.func([
+      props.id,
+      $(`select[name="${props.id}"]`).find(":selected").val(),
+    ]);
   }
 
   return (

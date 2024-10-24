@@ -13,6 +13,7 @@ export default function Dropdown(props) {
         {props.name}
       </label>
       <select className={styles.dropdown} name={props.id} onChange={bufferFunc}>
+        <option value="NA">None</option>
         {!props.values ? (
           <option>No Values Found</option>
         ) : (

@@ -25,6 +25,13 @@ export default function QueryBuilder() {
     sortVal: "",
   });
 
+  useEffect(() => {
+    setPath({ limit: "", sortVal: "" });
+    setQuery([]);
+  }, [data]);
+
+  const [query, setQuery] = useState([]);
+
   function generateRequest() {
     let modifiedEndpoint = data.endpoint;
     let finalEndpoint = modifiedEndpoint.split("/");
@@ -35,9 +42,21 @@ export default function QueryBuilder() {
         arr[idx] = path.sortVal;
       }
     });
-    // console.log(finalEndpoint);
 
-    console.log(`url.com/${data.dataset}${finalEndpoint.join("/")}?`);
+    let queryString = "?";
+    if (query && query.length !== 0) {
+      query.forEach((obj) => {
+        const [key, val] = Object.entries(obj)[0];
+        queryString += `${key}=${val}&`;
+      });
+    }
+    queryString += "key=testkey";
+
+    console.log(
+      `https://footballapi-5210c36e4e2d.herokuapp.com/${
+        data.dataset
+      }${finalEndpoint.join("/")}${queryString}`
+    );
   }
 
   function handleDataset(val) {
@@ -54,8 +73,28 @@ export default function QueryBuilder() {
     });
   }
 
-  function handleParamChange(val) {
+  function handlePathChange(val) {
     setPath(val);
+  }
+
+  function handleQueryChange(val) {
+    const [key, value] = val;
+
+    if (value === "NA") {
+      return;
+    }
+
+    let found = false;
+    query.forEach((obj) => {
+      if (obj[key]) {
+        obj[key] = value;
+        found = true;
+      }
+    });
+
+    if (!found) {
+      setQuery([...query, { [key]: value }]);
+    }
   }
 
   useEffect(() => {
@@ -78,6 +117,8 @@ export default function QueryBuilder() {
 
     handleParams();
   }, [data]);
+
+  console.log(query);
 
   return (
     <>
@@ -132,21 +173,21 @@ export default function QueryBuilder() {
                     <PathParams
                       query={params.path}
                       name={data.dataset}
-                      func={handleParamChange}
+                      func={handlePathChange}
                     />
                   ) : params.path[0].key === "limit" ? (
                     <PathParams
                       query={params.path}
                       name={data.dataset}
                       show="limit"
-                      func={handleParamChange}
+                      func={handlePathChange}
                     />
                   ) : (
                     <PathParams
                       query={params.path}
                       name={data.dataset}
                       show="sortVal"
-                      func={handleParamChange}
+                      func={handlePathChange}
                     />
                   )}
                 </div>
@@ -157,7 +198,7 @@ export default function QueryBuilder() {
                   ) : (
                     <>
                       <ParamsDropdownBuffer
-                        func={handleParamChange}
+                        func={handleQueryChange}
                         name={data.dataset}
                       />
                     </>
