@@ -25,6 +25,8 @@ export default function QueryBuilder() {
     sortVal: "",
   });
 
+  const [requestURL, setRequestURL] = useState("");
+
   useEffect(() => {
     setPath({ limit: "", sortVal: "" });
     setQuery([]);
@@ -52,11 +54,13 @@ export default function QueryBuilder() {
     }
     queryString += "key=testkey";
 
-    console.log(
+    setRequestURL(
       `https://footballapi-5210c36e4e2d.herokuapp.com/${
         data.dataset
       }${finalEndpoint.join("/")}${queryString}`
     );
+
+    $(`#popup`).css("visibility", "visible");
   }
 
   function handleDataset(val) {
@@ -97,6 +101,10 @@ export default function QueryBuilder() {
     }
   }
 
+  function hidePopup() {
+    $(`#popup`).css("visibility", "hidden");
+  }
+
   useEffect(() => {
     const handleParams = () => {
       if (data.endpoint === "") {
@@ -118,12 +126,20 @@ export default function QueryBuilder() {
     handleParams();
   }, [data]);
 
-  console.log(query);
-
   return (
     <>
       <BG />
       <Navbar />
+      <div className={styles.popUp} id="popup">
+        <div>
+          <h1 className="oswald">
+            <a href={requestURL}>{requestURL}</a>
+          </h1>
+          <div>
+            <button onClick={hidePopup}>Ok</button>
+          </div>
+        </div>
+      </div>
       <div className={styles.container}>
         <h1 className="bebas-neue-regular">Query Builder</h1>
 
