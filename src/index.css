@@ -65,3 +65,17 @@ body {
 
   border-radius: 20px;
 }
+
+@media (max-width: 450px) {
+  body {
+    margin-top: 0;
+  }
+
+  .bgimg {
+    width: 150vw;
+    height: 150vh;
+
+    /* top: 10vh;
+    left: 10vw; */
+  }
+}

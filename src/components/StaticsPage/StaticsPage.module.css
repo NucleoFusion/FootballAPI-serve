@@ -69,3 +69,19 @@
   cursor: pointer;
   color: black;
 }
+
+.StaticsDiv {
+  overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+  .StaticsDiv button {
+    font-size: 2vh;
+  }
+  .StaticsDiv div:not(:has(button)) {
+    font-size: 2.5vh;
+  }
+  .StaticsDiv > h1 {
+    font-size: 4vh;
+  }
+}

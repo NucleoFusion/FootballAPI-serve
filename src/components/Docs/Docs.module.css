@@ -82,3 +82,36 @@ body {
   cursor: pointer;
   color: black;
 }
+
+@media (max-width: 600px) {
+  .DocsDiv p {
+    font-size: 2.5vh;
+  }
+  .DocsDiv h2 {
+    font-size: 4vh;
+  }
+  .DocsDiv h3 {
+    font-size: 2vh;
+  }
+
+  .DocsDiv button {
+    font-size: 2vh;
+    width: 22.5vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .buttonDiv {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    margin-left: -10vw;
+
+    gap: 2vh;
+  }
+
+  .buttonDiv button {
+    width: 40vw;
+  }
+}
