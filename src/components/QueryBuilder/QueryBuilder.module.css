@@ -230,3 +230,69 @@
 .popUp a:hover {
   color: gray;
 }
+
+@media (max-width: 600px) {
+  .container p {
+    font-size: 2.5vh;
+  }
+  
+  .container h1 {
+    font-size: 4vh;
+  }
+  
+  .container h2 {
+    font-size: 2.75vh;
+  }
+
+  .container button {
+    font-size: 2vh;
+    width: 30.5vw;
+  }
+
+  .paramsCont h1 {
+    font-size: 3vh;
+  }
+
+  .dropdownCont{
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .generateCont{
+    grid-row: span 1;
+    grid-column: span 1;
+
+    margin-top: 5vh;
+  }
+
+  .dropdownCont > div select{
+    width: 60vw;
+  }
+
+  .paramsCont{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .paramsCont > div > h1{
+    position: static;
+  }
+
+  .container{
+    overflow: scroll;
+  }
+
+  .container input{
+    width: 50vw;
+  }
+
+  .popUp > div {
+    width: 92.5vw;
+
+    font-size: 1.5vh;
+  }
+
+  .popUp button{
+    width: 50vw;
+  }
+} 

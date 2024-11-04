@@ -84,4 +84,13 @@
   .StaticsDiv > h1 {
     font-size: 4vh;
   }
+
+  .StaticsDiv div:has(button) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2vh;
+
+    margin-top: 5vh;
+  }
 }

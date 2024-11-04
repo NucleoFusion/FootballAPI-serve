@@ -132,9 +132,9 @@ export default function QueryBuilder() {
       <Navbar />
       <div className={styles.popUp} id="popup">
         <div>
-          <h1 className="oswald">
+          <p className="oswald">
             <a href={requestURL}>{requestURL}</a>
-          </h1>
+          </p>
           <div>
             <button onClick={hidePopup}>Ok</button>
           </div>

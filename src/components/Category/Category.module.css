@@ -107,3 +107,21 @@
   font-size: 3vh;
   font-weight: 300;
 }
+
+@media (max-width: 600px) {
+  .categoryContainer p {
+    font-size: 2.5vh;
+  }
+  .categoryContainer h1 {
+    font-size: 4vh;
+  }
+  .categoryContainer h2 {
+    font-size: 2.75vh;
+  }
+
+  .categoryContainer button {
+    font-size: 2vh;
+    width: 30.5vw;
+  }
+
+}

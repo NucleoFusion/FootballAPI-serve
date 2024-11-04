@@ -16,7 +16,7 @@ export default function PathParams(props) {
   if (props.show === "limit") {
     return (
       <div className={styles.dropdownDivs}>
-        <label htmlFor="limit">Limit</label>
+        <label htmlFor="limit" className="bebas-neue-regular">Limit</label>
         <input name="limit" onChange={handleChange} />
       </div>
     );
@@ -36,7 +36,7 @@ export default function PathParams(props) {
   return (
     <>
       <div className={styles.dropdownDivs}>
-        <label htmlFor="limit">Limit</label>
+        <label htmlFor="limit"className="bebas-neue-regular">Limit</label>
         <input name="limit" onChange={handleChange} />
       </div>
       <div>

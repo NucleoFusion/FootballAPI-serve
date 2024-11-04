@@ -43,3 +43,21 @@
 .keyVal {
   font-size: 2.5vh;
 }
+
+@media (max-width: 600px) {
+  .container p {
+    font-size: 2.5vh;
+  }
+  
+  .container h1 {
+    font-size: 4vh;
+  }
+  
+  .container > div > h1 {
+    font-size: 2.75vh;
+  }
+
+  .keyVal {
+    font-size: 2vh;
+  }
+}
